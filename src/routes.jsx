@@ -16,15 +16,14 @@ import PreviewContext from "./context/PreviewContext";
 export default createBrowserRouter(
     createRoutesFromElements(
         <>
-            <Route path="/" element={ <Home /> }></Route>
-            <Route path="/:accountlink" element={ <AccountLinks /> }></Route>
-            <Route path="/login" element={ <Login /> }></Route>
+            <Route path="/" element={<Dashboard />}></Route> {/* Rota inicial */}
+            <Route path="/ProjetoDctree" element={<Dashboard />}></Route> {/* Rota para ProjetoDctree */}
+            <Route path="/accountlinks" element={<AccountLinks />}></Route> {/* Rota para AccountLinks */}
+            <Route path="/login" element={<Login />}></Route>
             <Route path="/admin">
-                <Route path="dashboard" element={ <Dashboard /> }></Route>
-                <Route path="create-link" element={ <CreateLink /> }></Route>
-                
-                    <Route path="ui" element={ <PreviewContext><Ui /></PreviewContext> }></Route>
-                
+                <Route path="dashboard" element={<Dashboard />}></Route>
+                <Route path="create-link" element={<CreateLink />}></Route>
+                <Route path="ui" element={<PreviewContext><Ui /></PreviewContext>}></Route>
             </Route>
         </>
     )

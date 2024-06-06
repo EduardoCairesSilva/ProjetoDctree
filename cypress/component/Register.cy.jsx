@@ -39,7 +39,7 @@ describe('page/Register', () => {
         cy.get('input[type="email"]').should('have.length', 1).and('have.attr', 'placeholder').and('include', "Digite seu email")
 
         cy.get('input[type="password"]').should('have.length', 2).each((item, index) => {
-            cy.wrap(item).should('have.attr', 'placeholder').and('include', placeholder[index+2])
+            cy.wrap(item).should('have.attr', 'placeholder').and('include', placeholder[index + 2])
         })
 
         cy.get('form button').should('have.length', 1).and('have.text', "Cadastrar")
